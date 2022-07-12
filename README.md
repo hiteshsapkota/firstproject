@@ -62,6 +62,21 @@ python -m pip install -r requirement.txt
   - After the completion of training, the inference is performed in the training, validation, and testing set and the corresponding output is generated.
   - Inference output (training, validation, test) along with the training, and validation loss are stored in the output_dir with the root directory as         directory that of train.py in case of train.py and bucket_name/bucket_folder as root directory in case of train_s3.py. Specifically, losses are stored     in root_dir/output_dir/losses/training_identifier with names training_loss.pickle, val_loss.picke. Inference outputs are stored inside                     root_dir/output_dir/results/ with names train_prediction_training_identifier+.pickle, valid_prediction_training_identifier+.pickle,                          test_prediction_training_identifier+.pickle. The training_identifier holds the argument confifuration we pass as an input
   - The best model and last models are stored in root_dir/models/training_identifier+_best.pth and root_dir/models/training_identifier+_last.pth with root directory same as that of train.py in train.py and bucket_name/bucket_folder in case of train_s3.py
+
+## Performance Generation:
+To generate the performance in terms of AUC in case of hard label sampling and MAE in case of soft label setting, we can run the scripts analysis_all_models.py. It has following input arguments
+### Input Arguments:
+- bucket_name: name of the s3 bucket if read the outputs from the s3 bucket. Default piml-sniff
+- bucket_folder: Name of the folder inside s3 bucket that can be used as root working directory to read/write data/models
+- data2s3: Whether to read outputs (prediction scores) from the s3 bucket. Default True
+### Code Specific Arugments:
+Other than the input arguments, you can directly change some of the arguments in the code. For example, for the soft_label make it to True. Most of them are same as that of the one used during the training process.
+
+### Running:
+Run the code analysis_all_models.ipynb that calls analysis_all_models.sh. In analysis_all_models.sh the input arguments are passed to the code analysis_all_models.py. Finally, analysis_all_models performs the following:
+1. For each fold, get t performance for all settings like baseline, attention, finetune, attention+finetune. It generates the mean and sd performance done over all folds, all rand_state for all settings and store the result  dataset_type+.csv in outputs folder. In case of soft label setting it store the result dataset_type+_softlabel.csv. Here, dataset_type can be 'train', 'valid', or 'test'. While running the script it stores the result for all dataset_type. It should be noted that the root_dir for outputs folder will be the directory same as that of the train.py in case of data2s3 = False, and root_dir for outputs folder will be bucket_name/bucket_folder in s3 bucket in case of data2s3 = True.
+  
+
  
 
 
