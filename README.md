@@ -74,7 +74,9 @@ Other than the input arguments, you can directly change some of the arguments in
 
 ### Running:
 Run the code analysis_all_models.ipynb that calls analysis_all_models.sh. In analysis_all_models.sh the input arguments are passed to the code analysis_all_models.py. Finally, analysis_all_models performs the following:
-1. For each fold, get t performance for all settings like baseline, attention, finetune, attention+finetune. It generates the mean and sd performance done over all folds, all rand_state for all settings and store the result  dataset_type+.csv in outputs folder. In case of soft label setting it store the result dataset_type+_softlabel.csv. Here, dataset_type can be 'train', 'valid', or 'test'. While running the script it stores the result for all dataset_type. It should be noted that the root_dir for outputs folder will be the directory same as that of the train.py in case of data2s3 = False, and root_dir for outputs folder will be bucket_name/bucket_folder in s3 bucket in case of data2s3 = True.
+1. To generate the performance it reads train_prediction_identifier.pickle, valid_prediction_identifier.pickle, test_prediction_identifier.pickle from root_dir/output_dir/results where root_dir can be same as that of train.py in the train.py and bucket_name/bucket_bolder in s3 bucket in train_s3.py
+2. For each fold, get  performance for all settings like baseline, attention, finetune, attention+finetune. It generates the mean and sd performance done over all folds, all rand_state for all settings and store the result  dataset_type+.csv in outputs folder. In case of soft label setting it store the result dataset_type+_softlabel.csv. Here, dataset_type can be 'train', 'valid', or 'test'. While running the script it stores the result for all dataset_type. It should be noted that the root_dir for outputs folder will be the directory same as that of the train.py in case of data2s3 = False, and root_dir for outputs folder will be bucket_name/bucket_folder in s3 bucket in case of data2s3 = True. 
+
   
 
  
