@@ -62,7 +62,6 @@ python -m pip install -r requirement.txt
   - After the completion of training, the inference is performed in the training, validation, and testing set and the corresponding output is generated.
   - Inference output (training, validation, test) along with the training, and validation loss are stored in the output_dir with the root directory as         directory that of train.py in case of train.py and bucket_name/bucket_folder as root directory in case of train_s3.py. Specifically, losses are stored     in root_dir/output_dir/losses/training_identifier with names training_loss.pickle, val_loss.picke. Inference outputs are stored inside                     root_dir/output_dir/results/ with names train_prediction_training_identifier+.pickle, valid_prediction_training_identifier+.pickle,                          test_prediction_training_identifier+.pickle. The training_identifier holds the argument confifuration we pass as an input
   - The best model and last models are stored in root_dir/models/training_identifier+_best.pth and root_dir/models/training_identifier+_last.pth with root directory same as that of train.py in train.py and bucket_name/bucket_folder in case of train_s3.py
-  -
-  
+ 
 
 
