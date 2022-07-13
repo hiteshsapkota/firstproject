@@ -79,6 +79,8 @@ Run the code analysis_all_models.ipynb that calls analysis_all_models.sh. In ana
 1. To generate the performance it reads train_prediction_identifier.pickle, valid_prediction_identifier.pickle, test_prediction_identifier.pickle from root_dir/output_dir/results.
 2. For each fold, get  performance for all settings like baseline, attention, finetune, attention+finetune. It generates the mean and sd performance done over all folds, all rand_state for all settings and store the result  dataset_type+.csv in root_dir/outputs folder. In case of soft label setting it store the result dataset_type+_softlabel.csv inside root_dir/outputs/. Here, dataset_type can be 'train', 'valid', or 'test'. The script will store the result for all dataset_type. 
 
+
+
  
 
 
