@@ -1,8 +1,7 @@
 # Chemical and olfactory models for pre-training VOC sensors
 
-This is the code for work "Chemical and olfactory models for pre-training VOC sensors" done by Hitesh Sapkota during Internship 2022 under the supervision of Dr. Wesley Hong. 
-Because of the Confidential Issue, the detailed description of this work is not provided here. Please refer to the following documents if you are interested in this work 
-and talk to the Wesley to get the document permission.
+This is the code for work "Chemical and olfactory models for pre-training VOC sensors" done by Hitesh Sapkota during Internship 2022 under the supervision of Dr. Wesley Hong (Manager), saravanan sathananda manidas (Mentor), and Hongtao Yu (Onboarding Buddy). 
+Because of the Confidential Issue, the detailed description of this work is not provided here. Please refer to the following documents if you are interested in this work and talk to Wesley to get the document permission.
 
 ### Initial Project Plan Document: https://quip-amazon.com/YAkzAQzArNaq/Project-Plan
 ### Midpoint Document: https://quip-amazon.com/nlYPAT8TJkE2/Midterm-Model-Evaluation
@@ -24,7 +23,7 @@ python -m pip install -r requirement.txt
   - output_dir: Output to be stored (mainly inference result, training/validation loss) (Usually it is ./outputs/structure_encoder-odor_encoder)
   - n_fold: Number of Folds used for training/testing split. Number of training/testing set replication
   - valid_size: Percentage of Training set used for hyperparameter tuning such as early stopping
-  - rep_no: replication (fold) number used during training from a given folds. Value stays between [1..., n_fold} 
+  - rep_no: replication (fold) number used during training from a given folds. Value stays between 1,..., n_fold 
   - num_workers: Number of workers used for the training process.
   - batch_size: Number of data samples in each step
   - rand_state: Random seed used to make the replication. Usually value between 1-5 is set.
@@ -67,7 +66,7 @@ python -m pip install -r requirement.txt
   - The best model and last models will be stored in root_dir/models/training_identifier+_best.pth and root_dir/models/training_identifier+_last.pth respectively.
 
 ## Performance Generation:
-To generate the performance in terms of AUC in case of hard label sampling and MAE in case of soft label setting, we can run the scripts analysis_all_models.py. It has following input arguments
+To generate the performance in terms of AUC in case of hard label sampling and Mean Absolute Error (MAE) in case of soft label setting, we can run the scripts analysis_all_models.py. It has following input arguments
 ### Input Arguments:
 - bucket_name: name of the s3 bucket if read the outputs from the s3 bucket. Default piml-sniff
 - bucket_folder: Name of the folder inside s3 bucket that can be used as root working directory to read/write data/models
