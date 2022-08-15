@@ -1,6 +1,6 @@
 # Toward Protocols to Improve Molecule Embedding on Odor Discrimination Task
 
-This is the code for work "Chemical and olfactory models for pre-training VOC sensors" done by Hitesh Sapkota during Internship 2022 under the supervision of Wesley Hong (Manager), saravanan sathananda manidas (Mentor), and Hongtao Yu (Onboarding Buddy). 
+This is the code for work "Toward Protocols to Improve Molecule Embedding on Odor Discrimination Task" done by Hitesh Sapkota during Internship 2022 under the supervision of Wesley Hong (Manager), saravanan sathananda manidas (Mentor), and Hongtao Yu (Onboarding Buddy). 
 Because of the Confidential Issue, the detailed description of this work is not provided here. Please refer to the following documents if you are interested in this work and talk to Wesley to get the document permission.
 
 ### Initial Project Plan Document: https://quip-amazon.com/YAkzAQzArNaq/Project-Plan
