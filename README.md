@@ -27,7 +27,7 @@ It supports (i) baseline training, (ii) structure finetuning training, (iii) att
  To train the model go to src/experiments/training then run train.py using either of the scripts baseline.ipynb, finetune.ipynb, attention.ipynb, finetune_attention.ipynb. Depending on the input argument called use_bucket, the code performs all data/model/output read write operation from either local directory or through s3 bucket. If use_bucket is true then the code performs data read/write, model read/write operations from/to s3 bucket specified as an argument whereas, if false performs all operations relative to the current train.py script path. Throughout this readme file, when we say root_dir it means the directory same as that of the train.py in the case we are dealing with use_bucket = False and root_dir means bucket_name/bucket_folder in s3 bucket whenever we are dealing with use_bucket=True. All data, models, and outputs will be read and write relative to this root_dir. 
 
 **b. Using Sagemaker API:**
-A separate train_sagemaker_api.ipynb the peforms training  for baseline, structure encoder finetuning, attention, and finetuning+attention. Same training script is used as that of training using sagemaker studio except we set input argument use_sagemaker_studio = True in this case.
+A separate train_sagemaker_api.ipynb the peforms training  for baseline, structure encoder finetuning, attention, and finetuning+attention. Same training script is used as that of training using sagemaker studio except we set input argument use_sagemaker_api = True in this case.
     
     
 ### Multitask Learning:
