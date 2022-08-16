@@ -38,8 +38,10 @@ Our Multitask setting supports: (i) baseline training, and (ii) attention+finetu
     
 **b. Using Sagemaker API:**
 To train the model go to src/experiments/training and then run train_multitask.py using script train_sagemaker_api_multitask.ipynb. It is identical to using Sagemaker studio except we need to set argument use_sagemaker_api = True
-  
-Common Arguments for Training Scripts
+ 
+ **Note: Unlike Single Task Learning, Multitask Learning is designed to work only for the mol2vec structure encoder. Finetune only and attention only sagemaker notebook scripts are not provided but current version supports both of them**
+ 
+Common Arguments for Training Scripts. 
   
   ### Common Arguments:
   **Data Related Arguments**
@@ -85,7 +87,7 @@ Common Arguments for Training Scripts
   
   ### Running:
   Before running, if you want to run for the structure encoder 'molembtrans', then please download the pretrained network from the link wget https://github.com/mpcrlab/MolecularTransformerEmbeddings/releases/download/checkpoints/pretrained.ckpt. 
-  Once download is completed, upload it to the foloder 'sniff_ml/ml/structure_encoder/pretrained' with model name as 'molembtrans_model_512dim.ckpt'.
+  Once download is completed, upload it to the floder 'sniff_ml/ml/structure_encoder/pretrained' with model name as 'molembtrans_model_512dim.ckpt'.
   If you want to run the structure encoder 'bert', then please download the pretrained network from the link wget https://ndownloader.figshare.com/files/25611290.
   Once download is completed, upload it to the folder 'sniff_ml/ml/structure_encoder/pretrained' with model name as 'bert_model_768.ckpt' and .yaml file to hparams.yaml.
   
