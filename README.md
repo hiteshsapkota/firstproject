@@ -110,7 +110,7 @@ To generate the performance in terms of  Mean Absolute Error (MAE) in case of so
 
 
 ### analysis_all_models.py:
-Considers the Single Task Setting, and generates the average MAE score (for soft_label) averaged over 5 fold data and 5 replications. Running this script will generate result for the training, validation, and testing data and stores in directory root_dir/outputs/. This will generate Table 1 in the final document
+Considers the Single Task Setting, and generates the average MAE score (for soft_label) averaged over 5 fold data and 5 replications. Running this script will generate result for the training, validation, and testing data and stores in directory root_dir/outputs/. This will generate Table 1 in the final project document
 
 ### inference_multitask_bushdid.py:
 This will generate the output prediction result using multitask learning learned model related to the bushdid dataset. 
